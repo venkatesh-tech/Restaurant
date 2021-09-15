@@ -1,0 +1,9 @@
+1.flutter create projectname
+2.flutter run
+3.flutter pub get
+4.flutter pub upgrade
+5.flutter --help
+6.flutter
+
+Andriod connection to mobile(USB Debugging)
+
