@@ -4,6 +4,39 @@
 4.flutter pub upgrade
 5.flutter --help
 6.flutter
+7.flutter run --no-sound-null-safety
+
+Flutter run ket commands
+    r Hot reload
+    R Hot restart
+    h Repeat this help message
+    d detach
+    c clear the screen
+
+
+
+
+
+
 
 Andriod connection to mobile(USB Debugging)
+
+1.Statelesswidget-  Walkthrough(static)-(same images.photos,same dec) -static immutable
+- buttons with no action, label, title
+
+StatefullWidget-  wishlist(dynamic) - database - user - (LoginPage) mutable
+-buttons with actions, checkbox, title , row
+
+
+2. Routes -- 12-20 pages (Routing) - interlink - inheriting
+    -seprate files or in a main.dart
+
+3. utility: API connectivity, Payment GateWays, Push Notifications(Firebase, OneSignal -SDK) 
+
+4. Assests: Animations, videos, images
+
+5. Container(), Sacffold, Row(), Column, Text("Home Page), TextStyle(fontSize:24)
+
+Sacffold-- Root: {Header: appBar, body:Conatiner(//)}
+Row()-- 12 Columns: 4,4,4:  3,3,3,3:  6,6  col split ups
 
