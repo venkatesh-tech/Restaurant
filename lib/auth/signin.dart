@@ -78,7 +78,7 @@ class _SignInPageState extends State<SignInPage> {
                                             child: IconButton(
                                                 onPressed: () {
                                                   Navigator.pushNamed(
-                                                      context, 'signup');
+                                                      context, 'dashboard');
                                                 },
                                                 icon:
                                                     Icon(Icons.arrow_forward)))

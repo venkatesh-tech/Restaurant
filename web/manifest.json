@@ -1,6 +1,6 @@
 {
-    "name": "r",
-    "short_name": "r",
+    "name": "restaurant",
+    "short_name": "restaurant",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

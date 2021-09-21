@@ -5,6 +5,7 @@ Commands:
     4. flutter pub upgrade
     5. flutter --help
     6. flutter run --no-sound-null-safety
+    7. adb devices
 
 
 Flutter run key commands.
@@ -46,10 +47,11 @@ Colors: Colors.blue
 
 Stack(children:), Row(children:), Column(children:)
 
-Row(children: [], crossAxisAlignment:)
-Column(children: [], crossAxisAlignment:, mainAxisAlignment:)
+Row(children: [], crossAxisAlignment:vertical, mainAxisAlignment: horizontal)
+Column(children: [], crossAxisAlignment:horizontal, mainAxisAlignment:vertical)
+
 
 CustomButton(onTap: onPress:)
 FlatButton(onPressed: ())
 TextButton(onPressed: ())
-IconButton(onPressed: ()
+IconButton(onPressed: ())
