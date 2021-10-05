@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:restaurant/values/values.dart';
 // stful, stless, stanim
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -14,13 +14,13 @@ class _SignInPageState extends State<SignInPage> {
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/login.png'), fit: BoxFit.cover)),
+                image: AssetImage(ImagePath.loginBg), fit: BoxFit.cover)),
         child: Scaffold(
             backgroundColor: Colors.transparent,
             body: Stack(
               children: [
                 Container(
-                    padding: EdgeInsets.only(top: 130, left: 30),
+                    padding: EdgeInsets.only(top: Sizes.SIZE_120, left: 30),
                     child: Text(
                       'Welcome Dude!',
                       style: TextStyle(color: Colors.black, fontSize: 32),

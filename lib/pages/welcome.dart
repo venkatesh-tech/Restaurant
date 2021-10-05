@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:restaurant/values/values.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -15,6 +16,8 @@ class WelcomePage extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/login.png'), fit: BoxFit.cover)),
+            child: Padding(
+                padding: const EdgeInsets.all(16),
             child: Center(
                 child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,7 +35,7 @@ class WelcomePage extends StatelessWidget {
                     style: TextStyle(color: Colors.black, fontSize: 24)),
                 // Spacer(),
                 Padding(
-                    padding: const EdgeInsets.only(top: 25),
+                    padding: const EdgeInsets.all(16),
                     child: TextButton(
                         onPressed: () {
                           Navigator.pushNamed(context, 'signin');
@@ -40,11 +43,11 @@ class WelcomePage extends StatelessWidget {
                         child: Text(
                           'Welcome',
                           style: TextStyle(
-                              fontSize: 36,
+                              fontSize: Sizes.SIZE_20,
                               decoration: TextDecoration.underline),
                           textAlign: TextAlign.left,
                         )))
               ],
-            ))));
+            )))));
   }
 }

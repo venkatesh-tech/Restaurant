@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+// import 'package:restaurant/animations/scaleRoute.dart';
+import 'package:restaurant/animations/navigateAnimation.dart';
+import 'package:restaurant/values/values.dart';
+import 'package:restaurant/widgets/bottomNavigationBar.dart';
+// import 'package:restaurant/widgets/customAppBar.dart';
+import 'package:restaurant/widgets/searchWidgets.dart';
+import 'package:restaurant/widgets/popularFoods.dart';
+import 'package:restaurant/auth/signin.dart';
 
 final TextStyle blackText = TextStyle(color: Colors.black);
 final TextStyle whiteText = TextStyle(color: Colors.white);
@@ -18,39 +26,54 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
   @override
   Widget build(BuildContext context) {
     Widget _imageCarousel = Container(
-        height: 200,
+        height: Sizes.HEIGHT_200,
         child: Carousel(
           boxFit: BoxFit.fill,
           images: [
-            AssetImage('assets/Vegetables.png'),
-            AssetImage('assets/Bakery.png'),
-            AssetImage('assets/Foodgrains.png'),
-            AssetImage('assets/Household.png'),
+            AssetImage(ImagePath.houseImg),
+            AssetImage(ImagePath.vegImg),
+            AssetImage(ImagePath.bakeryImg),
+            AssetImage(ImagePath.foodImg)
           ],
           animationDuration: Duration(milliseconds: 2000),
           autoplay: true,
           animationCurve: Curves.fastOutSlowIn,
+          dotSize: Sizes.SIZE_4,
+          dotSpacing: Sizes.SIZE_12,
+          dotColor: Colors.redAccent,
+          indicatorBgPadding: Sizes.SIZE_6,
+          dotBgColor: AppColorsConst.secondaryColor,
+          borderRadius: true,
         ));
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: const Text('Flipkart'),
+        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(color: AppColorsConst.black),
+        // title: Text(StringConstant.APP_NAME),
+        title: Text(StringConstant.HOME_TITLE,
+            style: TextStyle(
+                fontSize: Sizes.SIZE_16,
+                fontWeight: FontWeight.w500,
+                color: AppColorsConst.black)),
+        elevation: 0,
+        brightness: Brightness.light,
         actions: [
           IconButton(
               onPressed: () {
-                print('search button pressed');
+                // Navigator.pushNamed(context, 'signin');
+                Navigator.push(context, RotationRoute(SignInPage()));
               },
-              icon: const Icon(Icons.search, color: Colors.white)),
+              icon: const Icon(Icons.search, color: Colors.black)),
           IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.shopping_bag, color: Colors.white)),
+              icon: const Icon(Icons.shopping_bag, color: Colors.black)),
         ],
       ),
       drawer: Drawer(
         child: ListView(
           children: [
             UserAccountsDrawerHeader(
-              accountName: const Text('Praveen Kumar'),
+              accountName: const Text(StringConstant.DEFAULT_USER_NAME),
               accountEmail: const Text('pravileaf@gmail'),
               currentAccountPicture: GestureDetector(
                 child: CircleAvatar(
@@ -63,11 +86,13 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               ),
               decoration: const BoxDecoration(color: Colors.blueAccent),
             ),
-            const InkWell(
+            InkWell(
+              onTap: () {},
               child: ListTile(
                 title: Text(
                   'Home',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
                 leading: Icon(Icons.home),
               ),
@@ -76,7 +101,8 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               child: ListTile(
                 title: Text(
                   'Profile',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
                 leading: Icon(Icons.person),
               ),
@@ -85,16 +111,30 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               child: ListTile(
                 title: Text(
                   'My orders',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
                 leading: Icon(Icons.shopping_basket),
               ),
             ),
-            const InkWell(
+            InkWell(
+              onTap: () => {Navigator.pushNamed(context, 'category')},
               child: ListTile(
                 title: Text(
-                  'Favorites',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  'Category',
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
+                ),
+                leading: Icon(Icons.favorite),
+              ),
+            ),
+            InkWell(
+              onTap: () => {Navigator.pushNamed(context, 'address')},
+              child: ListTile(
+                title: Text(
+                  'Cart',
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
                 leading: Icon(Icons.favorite),
               ),
@@ -103,7 +143,8 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               child: ListTile(
                 title: Text(
                   'Settings',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
                 leading: Icon(Icons.settings),
               ),
@@ -112,7 +153,8 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               child: ListTile(
                 title: Text(
                   'About us',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
                 leading: Icon(Icons.help),
               ),
@@ -121,7 +163,8 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               child: ListTile(
                 title: Text(
                   'Terms & Conditions',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
                 leading: Icon(Icons.file_copy),
               ),
@@ -132,8 +175,9 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
             const InkWell(
               child: ListTile(
                 title: Text(
-                  'Version 0.0.1',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  StringConstant.APP_VERSION,
+                  style: TextStyle(
+                      fontSize: Sizes.SIZE_16, fontWeight: FontWeight.w500),
                 ),
               ),
             )
@@ -142,6 +186,7 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
       ),
       body: ListView(
         children: [
+          SearchWidget(),
           _imageCarousel,
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -162,6 +207,10 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               },
             ),
           ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          PopularFoodWidget(),
           const SizedBox(
             height: 20.0,
           ),
@@ -228,15 +277,29 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
               },
             ),
           ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Brands',
+              style: TextStyle(color: Colors.black, fontSize: 20),
+            ),
+          ),
         ],
       ),
       // carousel
+      bottomNavigationBar: BottomBarNavigation(),
     );
   }
 }
 
 Widget _featuredList(BuildContext context) {
   return InkWell(
+    onTap: () {
+        Navigator.pushNamed(context, 'category');
+      },
       child: Column(
     children: <Widget>[
       Container(
@@ -312,7 +375,7 @@ Widget _brandsList(BuildContext context) {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
           image: DecorationImage(
-              image: AssetImage('assets/Household.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/Vegetables.png'), fit: BoxFit.cover),
         ),
         alignment: Alignment.center,
         width: 100,

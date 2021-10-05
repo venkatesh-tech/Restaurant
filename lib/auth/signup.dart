@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:restaurant/values/values.dart';
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
@@ -13,7 +13,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/register.png'), fit: BoxFit.cover)),
+                image: AssetImage(ImagePath.registerBg), fit: BoxFit.cover)),
         child: Scaffold(
             backgroundColor: Colors.transparent,
             appBar: AppBar(
