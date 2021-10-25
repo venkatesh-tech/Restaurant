@@ -2,7 +2,9 @@
     package="com.example.restaurant">
    <application
         android:label="restaurant"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        
+        >
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -37,5 +39,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        
     </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATIONS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>    
+    
+    
 </manifest>

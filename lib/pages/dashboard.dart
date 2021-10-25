@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:flutter/services.dart';
 // import 'package:restaurant/animations/scaleRoute.dart';
 import 'package:restaurant/animations/navigateAnimation.dart';
 import 'package:restaurant/values/values.dart';
@@ -56,7 +57,7 @@ class _RestaurantHomePageState extends State<RestaurantHomePage> {
                 fontWeight: FontWeight.w500,
                 color: AppColorsConst.black)),
         elevation: 0,
-        brightness: Brightness.light,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         actions: [
           IconButton(
               onPressed: () {

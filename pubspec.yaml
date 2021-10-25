@@ -17,6 +17,13 @@ dependencies:
   google_fonts: ^2.1.0
   font_awesome_flutter: 9.1.0
   animation_wrappers: ^0.0.1
+  http: ^0.13.4
+  shared_preferences: 2.0.8
+  provider: 6.0.1
+  flutter_local_notifications: 
+  date_time_picker: 
+
+  
 
 dev_dependencies:
   flutter_test:

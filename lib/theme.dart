@@ -27,9 +27,9 @@ ThemeData _lightTheme(BuildContext context) {
   final ThemeData base = ThemeData(
     brightness: Brightness.light,
     primaryColorBrightness: Brightness.light,
-    accentColorBrightness: Brightness.light,
+    // accentColorBrightness: Brightness.light,
     colorScheme: colorScheme,
-    buttonColor: Colors.blueAccent,
+    // buttonColor: Colors.blueAccent,
     pageTransitionsTheme: const PageTransitionsTheme(
         builders: <TargetPlatform, PageTransitionsBuilder>{
           TargetPlatform.android: ZoomPageTransitionsBuilder(),
@@ -59,9 +59,9 @@ ThemeData _darkTheme(BuildContext context) {
   final ThemeData base = ThemeData(
     brightness: Brightness.dark,
     primaryColorBrightness: Brightness.dark,
-    accentColorBrightness: Brightness.dark,
+    // accentColorBrightness: Brightness.dark,
     colorScheme: colorScheme,
-    buttonColor: Colors.blueAccent,
+    // buttonColor: Colors.blueAccent,
     pageTransitionsTheme: const PageTransitionsTheme(
         builders: <TargetPlatform, PageTransitionsBuilder>{
           TargetPlatform.android: ZoomPageTransitionsBuilder(),

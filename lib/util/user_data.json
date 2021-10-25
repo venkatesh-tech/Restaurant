@@ -1,0 +1,22 @@
+{
+    "id": "4",
+    "name": "Ramesh",
+    "mobile": "8124395244",
+    "email": "ramesh@gmail.com",
+    "aid": "4",
+    "address": {
+        "home": "281, attur, salem",
+        "work": "281, attur, chennai"
+    },
+    "status": "1",
+    "password": "Restricted0",
+    "reject": "0",
+    "accept": "0",
+    "complete": "0",
+    "a_status": "1",
+    "d_charge": null,
+    "currency": "₹",
+    "ResponseCode": "200",
+    "Result": "true",
+    "ResponseMsg": "Login successfully!"
+}

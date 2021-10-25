@@ -8,15 +8,15 @@ class CustomAppBarWidget extends StatelessWidget {
   final bool hasTrailing;
   final Widget leading; // one icon
   final List<Widget> trailing;
-  late GestureTapCallback onActionTap;
-  late GestureTapCallback onLeadingTap;
+  late final GestureTapCallback onActionTap;
+  late final GestureTapCallback onLeadingTap;
 
   CustomAppBarWidget(
     this.title,
     this.leading,
     this.trailing,
-    //this.onActionTap,
-    //this.onLeadingTap,
+    this.onActionTap,
+    this.onLeadingTap,
     {
     this.hasLeading = true,
     this.hasTrailing = true,
@@ -26,14 +26,14 @@ class CustomAppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: Sizes.ELEVATION_0,
-      leading: hasLeading ? (leading ?? defaultLeading()) : null,
+      leading: hasLeading ? leading : defaultLeading(),
       centerTitle: true,
       title: Text(title,
           style: TextStyle(
               color: AppColorsConst.headingText,
               fontWeight: FontWeight.w600,
               fontSize: Sizes.TEXT_SIZE_20)),
-      actions: hasLeading ? (trailing ?? defaultTrailing()) : null,
+      actions: hasLeading ? trailing : defaultTrailing(),
     );
   }
 

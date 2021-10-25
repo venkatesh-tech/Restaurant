@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:restaurant/animations/navigateAnimation.dart';
+// import 'package:restaurant/animations/navigateAnimation.dart';
 import 'package:restaurant/animations/scaleRoute.dart';
 import 'package:restaurant/pages/productsList.dart';
 import 'package:restaurant/values/values.dart';

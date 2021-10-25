@@ -23,34 +23,14 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
       type: BottomNavigationBarType.fixed,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            // title: Text(
-            //   StringConstant.HOME,
-            //   style: TextStyle(color: Color(0xFF2c2b2b)),
-            // )
-            label: StringConstant.HOME),
+            icon: Icon(Icons.home), label: StringConstant.HOME),
         BottomNavigationBarItem(
-            icon: Icon(Icons.near_me),
-            // title: Text(
-            //   StringConstant.NEAR_BY,
-            //   style: TextStyle(color: Color(0xFF2c2b2b)),
-            // )
-            label: StringConstant.NEAR_BY),
+            icon: Icon(Icons.near_me), label: StringConstant.NEAR_BY),
         BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.shoppingCart),
-            // title: Text(
-            //   StringConstant.CART,
-            //   style: TextStyle(color: Color(0xFF2c2b2b)),
-            // )),
             label: StringConstant.CART),
-
         BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.user),
-            // title: Text(
-            //   StringConstant.PROFILE,
-            //   style: TextStyle(color: Color(0xFF2c2b2b)),
-            // ))
-            label: StringConstant.PROFILE),
+            icon: Icon(FontAwesomeIcons.user), label: StringConstant.PROFILE),
       ],
       currentIndex: _selectedindex,
       selectedItemColor: Color(0xFFF82727),

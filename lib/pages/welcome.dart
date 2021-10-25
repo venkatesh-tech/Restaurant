@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:restaurant/values/values.dart';
 
 class WelcomePage extends StatelessWidget {
+  
   const WelcomePage({Key? key}) : super(key: key);
 
   @override

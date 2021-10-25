@@ -73,3 +73,138 @@ Creating and Accessing Widgets:
         -- use it throught out the application via instantiation
     2. Create  Widget on the same page as variable or function
         -- use it in same file also use import for other files as well.
+
+API - 
+http or https - (Peer-to-peer connections, SMS, Payment, Map) 
+
+
+// Application Server - php, nodejs, python - 5kb - 1TB (INR 12000)
+// Media Server - Youtube,  ($5000 - $90000) - 1Gb (100TB)
+// Stun/Turn Servers or Signalling Servers - 
+// localserver - Apache(Xampp) - Nginx, Node (Express)
+
+
+Flutter - API - Model (data conversion) - View (UI)
+// Nodejs - https://nodejs.org
+
+
+CORS: disabled
+
+// result["Result"]  => "true"
+    
+    if(
+    (
+    result[
+        "Result"
+    ] == "true" && 
+    result[
+        "ResponseCode"
+    ] == "200")
+    ){
+        // truth statement
+    }else{
+        // error statement
+    }
+
+import 'dart:convert';
+JSON, CSV - object --> Dart Object (Map, List, Dynamic)
+
+import 'dart:async';
+
+// future, factory, async, await, snapshot
+
+Task 1 and Task 2: sync;; task 2 will wait until Task 1 completed
+Async - 
+
+Await - wait here until the particular function is finshed, you will get the result
+
+Future - you can get the result for sure from your async function, then() or error()
+
+
+Flutter - Training:
+    1. UI - Widgets
+    2. SnackBar, BottomSheetWidget, DropDowns
+    3. Local JSON File access
+    4. HTTP - API
+    5. SplashScreen - OnBoarding Screens (Walkthrough pages - One Time)
+    6. Permission Access - Location, Storage, Camera Permission
+    7. Notifications (Push - Local Notification)
+    8. Application as a prodcustion build
+    9. Testing 
+    10. Play Store & App Store Hosting
+
+Features: 
+    1. Map Integration
+    2. SMS OTP 
+    3. Firebase/OneSignal for Notifications
+    4. Payment Integrations
+
+
+Notifications:
+    On - Time Notifications & Scheduled - In-App Notification
+        1. Cloud Integration - Firebase (Google) & OneSignal (Paid)
+        2. Local Notification - Code Level ---- Pay a lot
+        3. In-App Notification (Paid) - SMS & Email verification
+
+
+Prerequisites: 
+    1. Gmail ID (Other Google services) - developer ID (hosting our application) - $25/year
+    2. Apple ID (Other apple services) - developer ID (hosting our application) - $99/year - $399/year
+
+    Firebase Integration: 
+        Features: for Push Notifications, SMS & E-mail, Analytics, Crashlytics.
+        Plans: blaze(for enterprise scale-up), two projects with one-email id
+        1. Register your email
+        2. Creating your Project with respective details
+        3. Create Application to access google Services (Application ID - com.example.restaurant)
+            Eg: https://play.google.com/store/apps/details?id=com.zeroappz.silvertaxi
+        4. Download and Include google-services.json into android/app/
+        5. Include permissions in AndroidManifest.xml 
+        6. Include implementations in build.gradle files (project & app level)
+        7. firebase plugin installtion in pubspec.yaml
+
+
+
+Normal Permission:
+    1. ACCESS_NOTITFICATION_POLICY
+    2. ACCESS_WIFI_STATE, BLUETOOTH
+    3. BLUETOOTH_ADMIN, 
+    4. INTERNET
+    5. VIBRATE
+    6. MODIFY_AUDIO_SETTINGS
+    7. KILL_BACKGROUND_PROCESSES
+    8. MANAGE_OWN_CALLS
+
+Signature Permission:
+    1. CLEAR_APP_CACHE
+    2. MANAGE_DOCUMENT
+    3. READ_VOICEMAIL
+    4. REQUEST_INSTALL_PACKAGES
+    5. BIND_VPN_SERVICE
+    6. BIND_AUTOFILL_SERVICE
+    7. BIND_INPUT_METHOD
+
+Dangerous Permissions:
+    1. READ_CALENDAR, WRITE_CALENDAR
+    2. CAMERA
+    3. READ_CONTACTS
+    4. READ_AUDIO
+    5. CALL_PHONE, ANSWER_PHONE, SEND_SMS, RECEIVE_SMS, READ_SMS
+
+
+System Applicaiton: SYSTEM_ALERT_WINDOW
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

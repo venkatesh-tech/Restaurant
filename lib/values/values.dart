@@ -7,3 +7,7 @@ part 'strings.dart';
 part 'colors.dart';
 part 'images.dart';
 part 'sizes.dart';
+// gradients
+// shadows
+// decorations
+// borders

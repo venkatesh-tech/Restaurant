@@ -83,6 +83,7 @@ class _CartPageState extends State<CartPage> {
     ];
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
